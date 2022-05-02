@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-<a href="https://sachin281294.github.io/tic-tac-toe/">Click here to play the Game</a>
+<a href="https://sachin281294.github.io/Tic-tac-toe/">Click here to play the Game</a>
 
 <h2>GAME DESCRIPTION</h2>
 <p>Tic-tac-toe is a two player game (one of them being your computer program). The two players take turns putting marks on a 3x3 board. The player who first gets 3 of his/her marks in a row (vertically, horizontally, or diagonally) wins the game, and the other loses the game.</p>
