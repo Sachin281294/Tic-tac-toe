@@ -4,7 +4,7 @@ body {
 
 .container {
   margin: 0 auto;
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: grid;
   width: 300px;
   height: 300px;
@@ -32,8 +32,7 @@ div {
 }
 
 .top {
-  margin-top: 1rem;
-  padding: 1rem;
+  padding: 0.3rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +61,7 @@ div {
 }
 
 .winningText {
-  margin-top: 2rem;
+  margin-top: 1rem;
   border: none;
   width: 300px;
 }
@@ -70,4 +69,16 @@ div {
   border: none;
   width: 300px;
   margin-top: -2rem;
+}
+.reset {
+  margin-top: -1rem;
+  border: none;
+  width: 150px;
+}
+.resetButton {
+  padding: 1rem;
+  font-size: large;
+  border-radius: 10px;
+  font-weight: bold;
+  color: green;
 }

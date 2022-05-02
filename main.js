@@ -1,5 +1,7 @@
 var changeToCross = document.querySelector("body");
+var resetButton = document.querySelector(".resetButton");
 var playerTurn = "X";
+var emptyString = "";
 var one = document.querySelector(".box1");
 var two = document.querySelector(".box2");
 var three = document.querySelector(".box3");
@@ -149,3 +151,14 @@ function startGame(event) {
   }
 }
 changeToCross.addEventListener("click", startGame);
+resetButton.addEventListener("click", function (event1) {
+  one.textContent = emptyString;
+  two.textContent = emptyString;
+  three.textContent = emptyString;
+  four.textContent = emptyString;
+  five.textContent = emptyString;
+  six.textContent = emptyString;
+  seven.textContent = emptyString;
+  eight.textContent = emptyString;
+  nine.textContent = emptyString;
+});
