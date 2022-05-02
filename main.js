@@ -161,4 +161,5 @@ resetButton.addEventListener("click", function (event1) {
   seven.textContent = emptyString;
   eight.textContent = emptyString;
   nine.textContent = emptyString;
+  turn.textContent = "X turn";
 });
