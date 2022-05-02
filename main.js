@@ -9,115 +9,143 @@ var six = document.querySelector(".box6");
 var seven = document.querySelector(".box7");
 var eight = document.querySelector(".box8");
 var nine = document.querySelector(".box9");
-
-changeToCross.addEventListener("click", function (event) {
-  if (event.target.tagName === "DIV" && event.target.textContent == "") {
+var winningText = document.querySelector(".winningText");
+var turn = document.querySelector(".turn");
+turn.textContent = "X turn";
+var count = 0;
+var winningCondition = false;
+function startGame(event) {
+  if (
+    event.target.tagName === "DIV" &&
+    event.target.textContent == "" &&
+    winningCondition == false
+  ) {
     if (playerTurn == "X") {
       event.target.textContent = "X";
+      turn.textContent = "Now O turn";
       playerTurn = "O";
     } else {
       event.target.textContent = "O";
+      turn.textContent = "Now X turn";
       playerTurn = "X";
     }
   }
-});
+  count++;
 
-if (
-  one.textContent == "X" &&
-  one.textContent == two.textContent &&
-  two.textContent == three.textContent
-) {
-  alert("X is the winner");
-} else if (
-  one.textContent == "X" &&
-  one.textContent == four.textContent &&
-  four.textContent == seven.textContent
-) {
-  alert("X is the winner");
-} else if (
-  one.textContent == "X" &&
-  one.textContent == five.textContent &&
-  five.textContent == nine.textContent
-) {
-  alert("X is the winner");
-} else if (
-  two.textContent == "X" &&
-  two.textContent == five.textContent &&
-  five.textContent == eight.textContent
-) {
-  alert("X is the winner");
-} else if (
-  four.textContent == "X" &&
-  four.textContent == five.textContent &&
-  five.textContent == six.textContent
-) {
-  alert("X is the winner");
-} else if (
-  three.textContent == "X" &&
-  three.textContent == six.textContent &&
-  six.textContent == nine.textContent
-) {
-  alert("X is the winner");
-} else if (
-  three.textContent == "X" &&
-  three.textContent == five.textContent &&
-  five.textContent == seven.textContent
-) {
-  alert("X is the winner");
-} else if (
-  seven.textContent == "X" &&
-  seven.textContent == eight.textContent &&
-  eight.textContent == nine.textContent
-) {
-  alert("X is the winner");
-} else if (
-  one.textContent == "O" &&
-  one.textContent == two.textContent &&
-  two.textContent == three.textContent
-) {
-  alert("O is the winner");
-} else if (
-  one.textContent == "O" &&
-  one.textContent == four.textContent &&
-  four.textContent == seven.textContent
-) {
-  alert("O is the winner");
-} else if (
-  one.textContent == "O" &&
-  one.textContent == five.textContent &&
-  five.textContent == nine.textContent
-) {
-  alert("O is the winner");
-} else if (
-  two.textContent == "O" &&
-  two.textContent == five.textContent &&
-  five.textContent == eight.textContent
-) {
-  alert("O is the winner");
-} else if (
-  four.textContent == "O" &&
-  four.textContent == five.textContent &&
-  five.textContent == six.textContent
-) {
-  alert("O is the winner");
-} else if (
-  three.textContent == "O" &&
-  three.textContent == six.textContent &&
-  six.textContent == nine.textContent
-) {
-  alert("O is the winner");
-} else if (
-  three.textContent == "O" &&
-  three.textContent == five.textContent &&
-  five.textContent == seven.textContent
-) {
-  alert("O is the winner");
-} else if (
-  seven.textContent == "O" &&
-  seven.textContent == eight.textContent &&
-  eight.textContent == nine.textContent
-) {
-  alert("O is the winner");
-} else {
-  // alert("It's a draw");
+  if (
+    one.textContent == "X" &&
+    one.textContent == two.textContent &&
+    two.textContent == three.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    one.textContent == "X" &&
+    one.textContent == four.textContent &&
+    four.textContent == seven.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    one.textContent == "X" &&
+    one.textContent == five.textContent &&
+    five.textContent == nine.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    two.textContent == "X" &&
+    two.textContent == five.textContent &&
+    five.textContent == eight.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    four.textContent == "X" &&
+    four.textContent == five.textContent &&
+    five.textContent == six.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    three.textContent == "X" &&
+    three.textContent == six.textContent &&
+    six.textContent == nine.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    three.textContent == "X" &&
+    three.textContent == five.textContent &&
+    five.textContent == seven.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    seven.textContent == "X" &&
+    seven.textContent == eight.textContent &&
+    eight.textContent == nine.textContent
+  ) {
+    winningText.textContent = "X is the Winner!";
+    winningCondition = true;
+  } else if (
+    one.textContent == "O" &&
+    one.textContent == two.textContent &&
+    two.textContent == three.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    one.textContent == "O" &&
+    one.textContent == four.textContent &&
+    four.textContent == seven.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    one.textContent == "O" &&
+    one.textContent == five.textContent &&
+    five.textContent == nine.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    two.textContent == "O" &&
+    two.textContent == five.textContent &&
+    five.textContent == eight.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    four.textContent == "O" &&
+    four.textContent == five.textContent &&
+    five.textContent == six.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    three.textContent == "O" &&
+    three.textContent == six.textContent &&
+    six.textContent == nine.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    three.textContent == "O" &&
+    three.textContent == five.textContent &&
+    five.textContent == seven.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (
+    seven.textContent == "O" &&
+    seven.textContent == eight.textContent &&
+    eight.textContent == nine.textContent
+  ) {
+    winningText.textContent = "O is the Winner!";
+    winningCondition = true;
+  } else if (count == 9) {
+    winningText.textContent = "It's a Draw!";
+  }
 }
+changeToCross.addEventListener("click", startGame);
