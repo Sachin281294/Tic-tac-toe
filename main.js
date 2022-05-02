@@ -146,7 +146,7 @@ function startGame(event) {
   ) {
     winningText.textContent = "O is the Winner!";
     winningCondition = true;
-  } else if (count == 9) {
+  } else if (count == 10) {
     winningText.textContent = "It's a Draw!";
   }
 }
@@ -163,4 +163,5 @@ resetButton.addEventListener("click", function (event1) {
   nine.textContent = emptyString;
   turn.textContent = "X turn";
   winningText.textContent = emptyString;
+  count = 0;
 });

@@ -61,9 +61,14 @@ div {
 }
 
 .winningText {
-  margin-top: 1rem;
+  margin-top: 2rem;
   border: none;
-  width: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: large;
+  font-weight: bold;
 }
 .turn {
   border: none;
@@ -71,9 +76,12 @@ div {
   margin-top: -2rem;
 }
 .reset {
-  margin-top: -1rem;
+  margin-top: 1rem;
   border: none;
-  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
 }
 .resetButton {
   padding: 1rem;
