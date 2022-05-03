@@ -146,7 +146,7 @@ function startGame(event) {
   ) {
     winningText.textContent = "O is the Winner!";
     winningCondition = true;
-  } else if (count == 10) {
+  } else if (count == 9) {
     winningText.textContent = "It's a Draw!";
   }
 }
