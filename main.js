@@ -1,4 +1,4 @@
-var changeToCross = document.querySelector("body");
+var changeToCross = document.querySelector(".container");
 var resetButton = document.querySelector(".resetButton");
 var playerTurn = "X";
 var emptyString = "";
@@ -15,12 +15,22 @@ var winningText = document.querySelector(".winningText");
 var turn = document.querySelector(".turn");
 turn.textContent = "X turn";
 var count = 0;
+one.textContent = emptyString;
+two.textContent = emptyString;
+three.textContent = emptyString;
+four.textContent = emptyString;
+five.textContent = emptyString;
+six.textContent = emptyString;
+seven.textContent = emptyString;
+eight.textContent = emptyString;
+nine.textContent = emptyString;
+winningText.textContent = emptyString;
 var winningCondition = false;
 function startGame(event) {
   if (
     event.target.tagName === "DIV" &&
-    event.target.textContent == "" &&
-    winningCondition == false
+    event.target.textContent === emptyString &&
+    winningCondition === false
   ) {
     if (playerTurn == "X") {
       event.target.textContent = "X";
@@ -164,4 +174,5 @@ resetButton.addEventListener("click", function (event1) {
   turn.textContent = "X turn";
   winningText.textContent = emptyString;
   count = 0;
+  winningCondition = false;
 });
