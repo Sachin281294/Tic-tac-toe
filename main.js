@@ -32,6 +32,10 @@ eight.textContent = emptyString;
 nine.textContent = emptyString;
 winningText.textContent = emptyString;
 var winningCondition = false;
+var player_one = prompt("Please enter your Player1 name:", "Player 1");
+var player_two = prompt("Please enter your Player2 name:", "Player 2");
+document.querySelector(".player1").textContent = player_one + " :";
+document.querySelector(".player2").textContent = player_two + " :";
 function startGame(event) {
   if (
     event.target.tagName === "DIV" &&
